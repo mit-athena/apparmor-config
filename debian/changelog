@@ -1,3 +1,10 @@
+debathena-apparmor-config (1.2.5) unstable; urgency=low
+
+  * Add git-buildpackage configuration
+  * Set source format to 3.0 (native)
+
+ -- Alexander Chernyakhovsky <achernya@mit.edu>  Sun, 29 Sep 2013 04:50:09 -0400
+
 debathena-apparmor-config (1.2.4) unstable; urgency=low
 
   * Switch from control.in to control (Trac: #561)
