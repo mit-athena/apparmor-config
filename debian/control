@@ -2,7 +2,7 @@ Source: debathena-apparmor-config
 Section: debathena-config/admin
 Priority: extra
 Maintainer: Debathena Project <debathena@mit.edu>
-Build-Depends: cdbs, debhelper, dh-buildinfo, config-package-dev (>= 5.0~), debathena-maybe-apparmor, debathena-cups, ntp
+Build-Depends: cdbs, debhelper, dh-buildinfo, config-package-dev (>= 5.0~), debathena-maybe-apparmor, cups, ntp
 Standards-Version: 3.9.3
 
 Package: debathena-apparmor-config

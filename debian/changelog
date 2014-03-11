@@ -1,3 +1,9 @@
+debathena-apparmor-config (1.2.6) unstable; urgency=low
+
+  * Depend explicitly on CUPS
+
+ -- Victor Vasiliev <vasilvv@mit.edu>  Tue, 11 Mar 2014 10:41:01 -0400
+
 debathena-apparmor-config (1.2.5) unstable; urgency=low
 
   * Add git-buildpackage configuration
