@@ -1,3 +1,9 @@
+debathena-apparmor-config (1.2.7) unstable; urgency=low
+
+  * Reflect apparmor configuration changes in Ubuntu 14.04
+
+ -- Victor Vasiliev <vasilvv@mit.edu>  Thu, 27 Mar 2014 01:32:04 -0400
+
 debathena-apparmor-config (1.2.6) unstable; urgency=low
 
   * Depend explicitly on CUPS
