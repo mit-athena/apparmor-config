@@ -1,3 +1,11 @@
+debathena-apparmor-config (1.2.8) unstable; urgency=low
+
+  * Transform the xdg-desktop profile to take into account the fact that
+    the XDG cache may now be in /var/run, and also to explicitly allow
+    dconf profiles (Trac: #1505)
+
+ -- Jonathan Reed <jdreed@mit.edu>  Sun, 06 Jul 2014 18:49:08 -0400
+
 debathena-apparmor-config (1.2.7) unstable; urgency=low
 
   * Reflect apparmor configuration changes in Ubuntu 14.04

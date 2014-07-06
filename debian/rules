@@ -19,6 +19,12 @@ else
     DEB_UNDIVERT_FILES_debathena-apparmor-config += /etc/apparmor.d/abstractions/X.debathena
 endif
 
+ifneq ($(wildcard /etc/apparmor.d/abstractions/xdg-desktop),)
+    DEB_TRANSFORM_FILES_debathena-apparmor-config += /etc/apparmor.d/abstractions/xdg-desktop.debathena
+else
+    DEB_UNDIVERT_FILES_debathena-apparmor-config += /etc/apparmor.d/abstractions/xdg-desktop.debathena
+endif
+
 ifneq ($(wildcard /etc/apparmor.d/abstractions/nameservice),)
     DEB_TRANSFORM_FILES_debathena-apparmor-config += /etc/apparmor.d/abstractions/nameservice.debathena
 else
