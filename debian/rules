@@ -7,6 +7,12 @@ else
     DEB_UNDIVERT_FILES_debathena-apparmor-config += /etc/apparmor.d/abstractions/kerberosclient.debathena
 endif
 
+ifneq ($(wildcard /etc/apparmor.d/abstractions/base),)
+    DEB_TRANSFORM_FILES_debathena-apparmor-config += /etc/apparmor.d/abstractions/base.debathena
+else
+    DEB_UNDIVERT_FILES_debathena-apparmor-config += /etc/apparmor.d/abstractions/base.debathena
+endif
+
 ifneq ($(wildcard /etc/apparmor.d/abstractions/cups-client),)
     DEB_TRANSFORM_FILES_debathena-apparmor-config += /etc/apparmor.d/abstractions/cups-client.debathena
 else

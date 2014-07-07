@@ -1,0 +1,7 @@
+#!/bin/sh
+cat
+echo
+cat <<EOF
+  # Allow anything to read from the openafs cache
+  /var/cache/openafs/** r,
+EOF

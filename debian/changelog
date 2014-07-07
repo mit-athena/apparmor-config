@@ -1,3 +1,14 @@
+debathena-apparmor-config (1.2.9) unstable; urgency=low
+
+  * Further transform the xdg-desktop profile to allow access to dconf
+    profiles in /run/user or ~/.cache.  Upstream only allows access to the
+    "user" profile. (Trac: #1505)
+  * Transform the 'base' abstraction to allow read access to the OpenAFS
+    cache, otherwise Evince will attempt to frob things in ~/.local/share,
+    fail, and then OpenAFS will think the volume vanished. (Trac: #1505)
+
+ -- Jonathan Reed <jdreed@mit.edu>  Mon, 07 Jul 2014 14:36:48 -0400
+
 debathena-apparmor-config (1.2.8) unstable; urgency=low
 
   * Transform the xdg-desktop profile to take into account the fact that

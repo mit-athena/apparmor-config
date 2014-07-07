@@ -1,3 +1,15 @@
 #!/usr/bin/perl -p0
 s|^(\s*)owner \@\{HOME\}/.cache/\s+rw,$|$&\n$1owner /{,var/}run/athena-sessions/xdgcache-*/** rw,|m or die;
-s|$|\n\n  # Allow access to dconf profiles and databases\n  /etc/dconf/** r,\n| or die;
+END {
+    print <<'EOF'
+
+  # Allow access to dconf profiles and databases
+  /etc/dconf/** r,
+
+  # And runtime dconf profiles (in HOME or /run/user)
+  owner @{HOME}/.{cache,config}/dconf/     w,
+  owner @{HOME}/.{cache,config}/dconf/**   rw,
+  owner /{,var/}run/user/*/dconf/          w,
+  owner /{,var/}run/user/*/dconf/**        rw,
+EOF
+}
