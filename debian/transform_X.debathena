@@ -1,2 +1,2 @@
 #!/usr/bin/perl -p0
-s|^(\s*)(owner )?\@\{HOME\}/.Xauthority\s+r,$|$&\n$1/var/run/athena-sessions/xauth-* r,|m or die;
+s|^(\s*)(owner )?\@\{HOME\}/.Xauthority\s+r,$|$&\n$1/var/run/athena-sessions/xauth-* r,\n$1# And on stock trusty (see LP #1339727)\n$1owner /run/lightdm/*/xauthority r,\n|m or die;
