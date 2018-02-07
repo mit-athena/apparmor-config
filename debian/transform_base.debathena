@@ -2,6 +2,7 @@
 cat
 echo
 cat <<EOF
-  # Allow anything to read from the openafs cache
-  /var/cache/openafs/** r,
+  # OpenAFS seems to use the credentials of random processes to read
+  # and write the AFS cache, so we need to allow all such accesses.
+  /var/cache/openafs/** rw,
 EOF
